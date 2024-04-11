@@ -1,7 +1,9 @@
 from math import sin, cos, tan, pi , sqrt
 
 
-from settings import height, width, pointer
+height = [100, 100,   1]
+width = [52, 52,   1]
+pointer = '[]'
 
 class Cell:
     def __init__(self, x, y, alive:bool = False):
@@ -29,13 +31,10 @@ class Cell:
     
     def rules(self):
         # if self.gy == round(self.gx**2):
-        #     self.alive = True
-        # if self.gy == round(sin(self.gx * .2 *1)*6):
-        #     self.alive = True
+        if self.gy == round(sin(self.gx*1)+self.gx):
         # if self.gy == round(cos(self.gx * .2)*6):
-        #     self.alive = True
         # if self.gy == round(sin(self.gx * 0.2)*6) and self.gy == round(cos(self.gx * 0.2)*6) :
-        if self.gy == round(sqrt(abs(self.gx *10))):
+        # if self.gy == round(sqrt(abs(self.gx *10))):
             self.alive = True
         
         
